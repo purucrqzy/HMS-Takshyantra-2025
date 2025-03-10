@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Signup</title>
+    <link rel="stylesheet" href="../css/student/signup.css?v=1.0">
+    
+</head>
+
+<body>
+    <div class="form-container">
+        <form action="../php/student/signup.php" method="post">
+            <h2>Student Signup</h2>
+
+
+            <div class="form-wrapper">
+                <div class="form-section left">
+                    <h3>Login Information</h3>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mobile_no">Mobile No:</label>
+                    <input type="number" id="mobile_no" name="mobile_no" required>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname">
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+
+                <div class="form-section right">
+                    <h3>Academic Information</h3>
+
+                    <label for="dob">Date Of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <!-- Dropdown for Current Course -->
+                    <label for="course">Current Course:</label>
+                    <select id="course" name="course">
+                        <option value="">-- Select Course --</option>
+                        <option value="Bachelor of Technology">B.Tech</option>
+                        <option value="Maste of Technology">M.Tech</option>
+                        <option value="Bacholr of Computer_Applications">BCA</option>
+                        <option value="Diploma in Polytechnic">Polytechnic</option>
+                        <option value="Master of Business Administration">MBA</option>
+                        <option value="Doctor of Philosophy">Ph.D</option>
+                        <option value="Diploma in Pharmacy">D Pharma</option>
+                        <option value="Bachelor of Pharmacy">B Pharma</option>
+                        <option value="Master of Pharmacy">M Pharma</option>
+                    </select>
+
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" name="department">
+
+                    <label for="yearofstudy">Year of Study:</label>
+                    <input type="text" id="yearofstudy" name="yearofstudy">
+
+                    <label for="rollno">Student Special ID NO:</label>
+                    <input type="text" id="rollno" name="rollno">
+
+                    <label for="pasteducation">Past Education:</label>
+                    <input type="text" id="pasteducation" name="pasteducation">
+
+                </div>
+
+
+                <div class="form-section right">
+                    <h3>Personal Information</h3>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="">-- Select Gender --</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+
+                    </select>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="2"></textarea>
+
+                    <label for="postcode">PostCode:</label>
+                    <input type="text" id="postcode" name="postcode">
+
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state">
+
+                    <label for="district">District:</label>
+                    <input type="text" id="district" name="district">
+
+                </div>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit">Sign Up</button>
+                <a href="login.html" class="signup-button">LOG IN</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+<script src="../javascript/student/student_signup_validation.js"></script>
+</html>

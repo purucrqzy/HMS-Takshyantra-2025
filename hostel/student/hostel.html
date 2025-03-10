@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostels</title>
+    <link rel="stylesheet" href="../css/student/hostels.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="../media/images/1.png" alt="Logo" class="logo">
+            <h1>Hostels</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="dashboard.php">Home</a></li>
+                <li><a href="#">Hostels</a></li>
+                <li><a href="message.php">Message</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="../php/student/logout.php">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The main content -->
+
+    <!-- Boys Hostel Section -->
+    <section class="hostel-section" id="boys-hostel">
+        <h2>Boys Hostel</h2>
+        <div class="image-container" onclick="toggleTray('boys-tray')">
+            <img src="../media/images/2.png" alt="Boys Hostel" class="hostel-banner">
+        </div>
+        <div class="details-tray" id="boys-tray">
+            <div class="hostel-details">
+                <p>Details about the boys hostel go here.</p>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../media/galary/h1.jpg" alt="Service 1">
+                        <p>Spacious Rooms</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h2.jpg" alt="Service 2">
+                        <p>Modern Gym</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h3.jpg" alt="Service 3">
+                        <p>24/7 Security</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h4.jpg" alt="Service 4">
+                        <p>Recreational Areas</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h5.jpg" alt="Service 5">
+                        <p>Clean Dining Hall</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h6.jpg" alt="Service 6">
+                        <p>Wi-Fi Access</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h7.jpg" alt="Service 7">
+                        <p>First-Aid Room</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h8.jpg" alt="Service 8">
+                        <p>Laundry Services</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/h9.jpg" alt="Service 9">
+                        <p>Reading Room</p>
+                    </div>
+                </div>
+                <p class="hostel-promotion">
+                    Our hostel offers a perfect blend of comfort, convenience, and security.
+                    With spacious rooms, modern amenities, and round-the-clock support,
+                    we ensure a home-like environment for our students. The hostel is equipped
+                    with a fully functional gym, high-speed Wi-Fi, and recreational areas to
+                    foster learning and relaxation. Experience quality living with top-notch
+                    facilities, delicious meals, and a vibrant community that makes your
+                    academic journey both productive and enjoyable!
+                </p>
+                <button class="apply-btn" onclick="navigateToPage('hostel_application.php')">Apply for Boys
+                    Hostel</button>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Girls Hostel Section -->
+    <section class="hostel-section" id="girls-hostel">
+        <h2>Girls Hostel</h2>
+        <div class="image-container" onclick="toggleTray('girls-tray')">
+            <img src="../media/images/4.png" alt="Girls Hostel" class="hostel-banner">
+        </div>
+        <div class="details-tray" id="girls-tray">
+            <div class="hostel-details">
+                <p>Details about the girls hostel go here.</p>
+
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../media/galary/g1.jpg" alt="Service 1">
+                        <p>Spacious Rooms</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g2.jpg" alt="Service 2">
+                        <p>Modern Gym</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g3.jpg" alt="Service 3">
+                        <p>24/7 Security</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g4.jpg" alt="Service 4">
+                        <p>Recreational Areas</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g5.jpg" alt="Service 5">
+                        <p>Clean Dining Hall</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g6.jpg" alt="Service 6">
+                        <p>Wi-Fi Access</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g7.jpg" alt="Service 7">
+                        <p>First-Aid Room</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g8.jpg" alt="Service 8">
+                        <p>Laundry Services</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../media/galary/g9.jpg" alt="Service 9">
+                        <p>Reading Room</p>
+                    </div>
+                </div>
+                <p class="hostel-promotion">
+                    Our hostel offers a perfect blend of comfort, convenience, and security.
+                    With spacious rooms, modern amenities, and round-the-clock support,
+                    we ensure a home-like environment for our students. The hostel is equipped
+                    with a fully functional gym, high-speed Wi-Fi, and recreational areas to
+                    foster learning and relaxation. Experience quality living with top-notch
+                    facilities, delicious meals, and a vibrant community that makes your
+                    academic journey both productive and enjoyable!
+                </p>
+                <button class="apply-btn" onclick="navigateToPage('hostel_application.php')">Apply for Boys
+                    Hostel</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <p>&copy; 2024 MyWeb. All rights reserved.</p>
+    </footer>
+</body>
+<script src="../javascript/student/hostels.js"></script>
+
+</html>
