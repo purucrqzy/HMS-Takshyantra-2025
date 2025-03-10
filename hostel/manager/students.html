@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel | Students</title>
+    <link rel="stylesheet" href="../css/manager/hostel_students.css">
+</head>
+
+<body>
+
+    <!-- header with navigation -->
+    <header>
+        <div class="logo-container">
+            <img src="../media/images/1.png" alt="Logo" class="logo">
+            <h1>Hostel Students</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="dashboard.php">Home</a></li>
+                <li><a href="hostel_applications.html">Applications</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="complaints.html">Messages</a></li>
+                <li><a href="../php/manager/logout.php">Logout</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- The main content -->
+    <h1>Hostel Students</h1>
+    <div class="container">
+
+        <table id="applicationsTable">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Father Name</th>
+                    <th>Surname</th>
+                    <th>DOB</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Department</th>
+                    <th>Year of Study</th>
+                    <th>Address</th>
+                    <th>Postcode</th>
+                    <th>State</th>
+                    <th>District</th>
+                    <th>Room No</th>
+                    <th>Room Type</th>
+                    <th>Admitted On</th>
+
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Dynamic rows will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- the footer content goes here -->
+
+    <!-- Footer -->
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <p>&copy; 2024 MyWeb. All rights reserved.</p>
+    </footer>
+</body>
+<script src="../javascript/manager/hostel_students.js"></script>
+
+</html>

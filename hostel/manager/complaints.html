@@ -1,0 +1,71 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints List</title>
+    <link rel="stylesheet" href="../css/manager/complaints.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="../media/images/1.png" alt="Logo" class="logo">
+            <h1>Messages</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="dashboard.php">Home</a></li>
+                <li><a href="hostel_applications.html">Applications</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="../php/manager/logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header><div class="container">
+        <h1>Complaints Status</h1>
+        <table border="1" class="complaints-table">
+            <thead>
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Room No</th>
+                    <th>Issue Type</th>
+                    <th>Remarks</th>
+                    <th>Status</th>
+                    <th>Operation 1 (In Progress)</th>
+                    <th>Operation 2 (Resolved)</th>
+                </tr>
+            </thead>
+            <tbody id="complaints-body">
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <p>&copy; 2024 MyWeb. All rights reserved.</p>
+    </footer>
+   
+</body>
+<script src="../javascript/manager/complaints.js"></script>
+</html>

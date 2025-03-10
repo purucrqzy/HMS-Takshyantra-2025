@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Hostel Manager</title>
+    <link rel="stylesheet" href="../css/admin/create_hm.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="../media/images/1.png" alt="Logo" class="logo">
+            <h1>Hostel Managers</h1>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="dashboard.php">Home</a></li>
+                <li><a href="#">Hostel Manager</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="../php/admin/logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Form and its unique slider for both forms -->
+    <div class="unique-form-slider-container">
+        <div class="unique-form-slider-buttons">
+            <button class="unique-slider-btn" id="unique-add-form-btn">Add Hostel Manager</button>
+            <button class="unique-slider-btn" id="unique-remove-form-btn">Remove Hostel Manager</button>
+        </div>
+        <div class="unique-form-slider">
+            <!-- Add Hostel Manager Form -->
+            <form action="../php/admin/add_manager.php" method="post" id="unique-add-form" class="unique-form">
+                <h2>Add Hostel Manager</h2>
+                <div class="unique-form-group">
+                    <label for="unique-username-add">Username:</label>
+                    <input type="text" id="unique-username-add" name="username" placeholder="Enter username" required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-firstname">First Name:</label>
+                    <input type="text" id="unique-firstname" name="firstname" placeholder="Enter first name" required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-lastname">Last Name:</label>
+                    <input type="text" id="unique-lastname" name="lastname" placeholder="Enter last name" required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="">-- Select Gender --</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+
+                    </select>
+                </div>
+                <div class="unique-form-group">
+                    <label for="dob">Date Of Birth:</label>
+                    <input type="date" id="dob" name="dob" max="" required>
+
+                </div>
+
+                <div class="unique-form-group">
+                    <label for="unique-mobile">Mobile Number:</label>
+                    <input type="text" id="unique-mobile" name="mobile" placeholder="Enter mobile number" required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="smobile_no">Second Contact No:</label>
+                    <input id="smobile_no" name="smobile_no" type="text" placeholder="Enter second contact number">
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-hostel-code-add">Hostel Code:</label>
+                    <input type="text" id="unique-hostel-code-add" name="hostelcode" placeholder="Enter hostel code"
+                        required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-email">Email:</label>
+                    <input type="email" id="unique-email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-address">Address:</label>
+                    <textarea id="unique-address" name="address" placeholder="Enter address" required></textarea>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-password">Password:</label>
+                    <input type="password" id="unique-password" name="password" placeholder="Enter password" required>
+                </div>
+                <div class="unique-form-buttons">
+                    <button type="submit" class="unique-form-submit">Add Manager</button>
+                    <button type="button" class="unique-form-clear" id="unique-clear-add-form">Clear</button>
+                </div>
+            </form>
+
+            <!-- Remove Hostel Manager Form -->
+            <form action="../php/admin/remove_manager.php" method="post" id="unique-remove-form" class="unique-form">
+                <h2>Remove Hostel Manager</h2>
+                <div class="unique-form-group">
+                    <label for="unique-username-remove">Username:</label>
+                    <input type="text" id="unique-username-remove" name="username" placeholder="Enter username"
+                        required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-hostel-code-remove">Hostel Code:</label>
+                    <input type="text" id="unique-hostel-code-remove" name="hostelcode" placeholder="Enter hostel code"
+                        required>
+                </div>
+                <div class="unique-form-group">
+                    <label for="unique-admin-password">Confirm Deletion:</label>
+                    <input type="password" id="unique-admin-password" name="adminpassword" placeholder="Confirm or Not"
+                        required>
+                </div>
+                <div class="unique-form-buttons">
+                    <button type="submit" class="unique-form-submit">Remove Manager</button>
+                    <button type="button" class="unique-form-clear" id="unique-clear-remove-form">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- form slider ends here -->
+
+
+    <!-- Footer -->
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <p>&copy; 2024 MyWeb. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("unique-remove-form").addEventListener("submit", function (event) {
+            // Hostel Code Validation
+            const hostelCodeField = document.getElementById("unique-hostel-code-remove");
+            const hostelCodeRegex = /^[A-Z]{4}$/; // Only 4 uppercase letters
+
+            if (!hostelCodeRegex.test(hostelCodeField.value)) {
+                alert("Hostel code must be exactly 4 uppercase letters (A-Z).");
+                hostelCodeField.focus(); // Highlight the field for the user
+                event.preventDefault(); // Prevent form submission
+                return;
+            }
+
+            // If all validations pass, allow form submission
+        });
+    </script>
+
+</body>
+<script src="../javascript/admin/create_hm.js"></script>
+<script src="../javascript/admin/create_hm_validation.js"></script>
+
+</html>
